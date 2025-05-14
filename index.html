@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bytesnal – Complete OS Encyclopedia</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-dark: #0f1115;
+      --bg-light: #f7f8fc;
+      --text-dark: #f2f2f2;
+      --text-light: #1a1a1a;
+      --primary: #7c4dff;
+      --glass: rgba(255, 255, 255, 0.05);
+      --glass-light: rgba(255, 255, 255, 0.7);
+      --blur: blur(20px);
+      --shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+    }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      transition: background 0.3s, color 0.3s;
+    }
+
+    body.dark {
+      background: var(--bg-dark);
+      color: var(--text-dark);
+    }
+
+    body.light {
+      background: var(--bg-light);
+      color: var(--text-light);
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: var(--glass);
+      backdrop-filter: var(--blur);
+      -webkit-backdrop-filter: var(--blur);
+      padding: 1rem 2rem;
+      box-shadow: var(--shadow);
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    .header .logo {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .nav {
+      display: flex;
+      gap: 1.5rem;
+      align-items: center;
+    }
+
+    .nav a {
+      color: #ccc;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
+
+    .nav a:hover {
+      color: #fff;
+    }
+
+    .theme-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #fff;
+      font-size: 1.2rem;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.5rem;
+      margin: 3rem 0 1.5rem;
+      color: #fff;
+    }
+
+    .os-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 2rem;
+      padding: 2rem;
+      max-width: 1400px;
+      margin: auto;
+    }
+
+    .os-card {
+      background: var(--glass);
+      backdrop-filter: var(--blur);
+      border-radius: 20px;
+      padding: 1.5rem;
+      text-align: center;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s;
+      border: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .os-card:hover {
+      transform: scale(1.03);
+    }
+
+    .os-card img {
+      height: 100px;
+      margin-bottom: 1rem;
+      filter: drop-shadow(0 8px 16px rgba(0,0,0,0.2));
+    }
+
+    .os-card h3 {
+      font-size: 1.2rem;
+      margin: 0.5rem 0;
+    }
+
+    .os-card p {
+      font-size: 0.9rem;
+      color: #ccc;
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+      color: #aaa;
+      border-top: 1px solid rgba(255, 255, 255, 0.05);
+    }
+
+    @media (max-width: 600px) {
+      .nav {
+        display: none;
+      }
+    }
+  </style>
+</head>
+<body class="dark">
+  <header class="header">
+    <div class="logo">Bytesnal</div>
+    <nav class="nav">
+      <a href="#">Home</a>
+      <a href="#">Android</a>
+      <a href="#">Linux</a>
+      <a href="#">Windows</a>
+      <a href="#">macOS</a>
+      <button class="theme-toggle" onclick="toggleTheme()">☀️</button>
+    </nav>
+  </header>
+
+  <main>
+    <h2 class="section-title">Operating Systems</h2>
+    <div class="os-grid">
+      <div class="os-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Android">
+        <h3>Android</h3>
+        <p>Google’s mobile OS</p>
+      </div>
+      <div class="os-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/732/732221.png" alt="Windows">
+        <h3>Windows</h3>
+        <p>Microsoft’s desktop OS</p>
+      </div>
+      <div class="os-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/919/919847.png" alt="Linux">
+        <h3>Linux</h3>
+        <p>Open-source kernel</p>
+      </div>
+      <div class="os-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968849.png" alt="Ubuntu">
+        <h3>Ubuntu</h3>
+        <p>Beginner-friendly Linux</p>
+      </div>
+      <div class="os-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/5968/5968895.png" alt="Arch Linux">
+        <h3>Arch Linux</h3>
+        <p>Minimalist Linux distro</p>
+      </div>
+      <div class="os-card">
+        <img src="https://cdn-icons-png.flaticon.com/512/888/888853.png" alt="macOS">
+        <h3>macOS</h3>
+        <p>Apple’s premium OS</p>
+      </div>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Bytesnal. Icons from <a href="https://www.flaticon.com" target="_blank" style="color:#a58bff;">Flaticon</a>.
+  </footer>
+
+  <script>
+    function toggleTheme() {
+      const body = document.body;
+      const isDark = body.classList.contains('dark');
+      body.classList.toggle('dark', !isDark);
+      body.classList.toggle('light', isDark);
+
+      const icon = document.querySelector('.theme-toggle');
+      icon.textContent = isDark ? '🌙' : '☀️';
+    }
+  </script>
+</body>
+</html>
