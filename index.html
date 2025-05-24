@@ -1,12 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-<head><meta name="google-site-verification" content="h1WL9tfhiJX11Ene0hUtGKk6x79-biMzCV5-z15YaDk" />
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Bytesnal – Complete OS Encyclopedia</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-  <style>
-    <head>
+<head>
+  <meta name="google-site-verification" content="h1WL9tfhiJX11Ene0hUtGKk6x79-biMzCV5-z15YaDk" />
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Bytesnal – Complete OS Encyclopedia</title>
@@ -14,60 +9,11 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" href="file_00000000b7bc61f7ba669b0301985b66.png" />
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
 
   <!-- Custom Styles -->
   <style>
-    body {
-      background-color: #0f0f0f;
-      color: #e0e0e0;
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      padding: 15px 30px;
-      background: #1c1c1c;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
-    }
-
-    header img {
-      height: 50px;
-      width: auto;
-      margin-right: 15px;
-      border-radius: 10px;
-    }
-
-    header h1 {
-      font-size: 26px;
-      margin: 0;
-      background: linear-gradient(90deg, #6a00ff, #00bcd4);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-
-    main {
-      padding: 40px 30px;
-    }
-
-    main h2 {
-      color: #6a00ff;
-    }
-
-    a {
-      color: #00bcd4;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-  </style>
-</head>
     :root {
       --bg-dark: #0f1115;
       --bg-light: #f7f8fc;
@@ -81,9 +27,11 @@
     }
 
     body {
-      font-family: 'Inter', sans-serif;
+      font-family: 'Inter', 'Roboto', sans-serif;
       margin: 0;
       transition: background 0.3s, color 0.3s;
+      background-color: #0f0f0f;
+      color: #e0e0e0;
     }
 
     body.dark {
@@ -197,6 +145,28 @@
       border-top: 1px solid rgba(255, 255, 255, 0.05);
     }
 
+    .crystal-button {
+      display: inline-block;
+      padding: 12px 28px;
+      font-size: 16px;
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      border-radius: 16px;
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+      transition: all 0.3s ease;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+
+    .crystal-button:hover {
+      background: rgba(255, 255, 255, 0.2);
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      transform: scale(1.05);
+    }
+
     @media (max-width: 600px) {
       .nav {
         display: none;
@@ -223,31 +193,7 @@
       <div class="os-card">
         <img src="https://cdn-icons-png.flaticon.com/512/888/888879.png" alt="Android">
         <h3>Android</h3>
-        <a href="androidsection.html">let's go</a>
-
-<style>
-.crystal-button {
-  display: inline-block;
-  padding: 12px 28px;
-  font-size: 16px;
-  color: white;
-  text-decoration: none;
-  font-weight: 600;
-  border-radius: 16px;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease;
-  border: 1px solid rgba(255, 255, 255, 0.3);
-}
-
-.crystal-button:hover {
-  background: rgba(255, 255, 255, 0.2);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
-  transform: scale(1.05);
-}
-</style>
+        <a href="androidsection.html" class="crystal-button">let's go</a>
         <p>Google’s mobile OS</p>
       </div>
       <div class="os-card">
